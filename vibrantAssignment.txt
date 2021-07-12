@@ -1,0 +1,19 @@
+The below-given task for the Technical round is being assigned.
+
+Please do follow the instructions below to complete it.  
+
+The Mock API requests are in  https://reqres.in/, you will find some of the API requests on this page, use the following API's
+
+Login Form    with a static username and password, and  we should not allow the user to perform the above operations without authentication
+RouterGuard without login should not redirect to user screen
+List Users with Pagination
+Single User,
+User Not Found,
+Create User,
+Update user,
+Delete User
+
+To Create and update users add some more fields in UI and do the validations.
+Required Fields are First name, last name, username, phone, address, email, Pincode.
+
+Once the task is done, send the files via git by Wednesday 11 AM.
