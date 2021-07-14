@@ -1,0 +1,26 @@
+<div class=" container-md ">
+  <h3 class="h3 mb-3 font-weight-normal">User</h3>
+  
+  <div class="card" style="width: 18rem;">
+    <img src={{avatar}} class="card-img-top" alt="...">
+    <div class="card-body" >
+      <h5 class="card-title"> {{firstName}} {{lastName}}</h5>
+      <p class="card-text">
+        <span class="material-icons-outlined">
+          email 
+          </span> <span>{{email}}</span>
+      </p>
+      <span hidden>{{userID}}</span>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" (click)='editUser(userID)' >Edit</button>
+      <button type="button" class="btn btn-warning" (click)='deleteUser(userID)' >Delete User</button>
+    </div>
+
+    
+
+  </div>
+ 
+
+</div>

@@ -1,0 +1,27 @@
+<form #signinForm='ngForm' class="form-signin" (ngSubmit)='onSubmit(signinForm)' novalidate>
+  <!-- <span class="material-icons.md-18">face</span> -->
+
+  <img class="mb-4" src="../assets/login_black_24dp.svg" alt="">
+  <h3 class="h3 mb-3 font-weight-normal">Please sign in</h3>
+
+  <div>
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus
+    [(ngModel)]='signInModel.email' #email='ngModel'>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+    class="alert">
+    <div *ngIf="email.errors?.required">
+      Email is required.
+    </div>
+    </div>
+  </div>
+  <div>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required
+      [(ngModel)]='signInModel.password'>
+  </div>
+
+  <br>
+  <button class="btn btn-lg btn-primary btn-block" [disabled]="!signinForm.valid" type="submit">SignIn</button>
+
+</form>

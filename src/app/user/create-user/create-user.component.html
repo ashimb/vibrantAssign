@@ -1,0 +1,118 @@
+
+<form [formGroup]="userForm" (ngSubmit)='onSubmit()'>
+    <h3 class="h3 mb-3 font-weight-normal">{{headerText}}</h3>
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            First Name
+        </label>
+        <div>
+            <input formControlName ='firstname'
+             class="form-control form-control-sm"
+              type="text" required>
+            <div *ngIf="f.firstname.touched && f.firstname.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.firstname.errors">Name is required.</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Last Name
+        </label>
+        <div>
+            <input formControlName ='lastname' 
+            class="form-control form-control-sm" type="text" aria-required="true" required>
+            <div *ngIf="f.lastname.touched && f.lastname.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.lastname.errors">lastname is required.</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div formGroupName='gender' class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Gender
+        </label>
+        <div>
+            <input class="" formControlName ='male'  type="radio" value="male"  > Male
+            <input class="" formControlName ='female' type="radio" value="female"  > Female
+        </div>
+    </div> -->
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            UserName
+        </label>
+        <div>
+            <input formControlName ='username' 
+            class="form-control form-control-sm" type="text" required>
+            <div *ngIf="f.username.touched && f.username.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.username.errors">username is required.</div>
+            </div>
+        </div>
+    </div>
+   <!--  <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Password
+        </label>
+        <div>
+            <input class="form-control form-control-sm" type="password">
+        </div>
+    </div> -->
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Email
+        </label>
+        <div>
+            <input formControlName ='email' 
+            class="form-control form-control-sm" type="email" required>
+            <div *ngIf="f.email.touched && f.email.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.email.errors">email is required.</div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Phone
+        </label>
+        <div>
+            <input formControlName ='mobile' 
+            class="form-control form-control-sm" type="text" required>
+            <div *ngIf="f.mobile.touched && f.mobile.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.mobile.errors">mobile is required.</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Address
+        </label>
+        <div>
+            <input formControlName ='address'
+             class="form-control form-control-sm" type="text" required>
+             <div *ngIf="f.address.touched && f.address.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.address.errors">address is required.</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class='col-sm-2 col-form-label col-form-label-sm'>
+            Pincode
+        </label>
+        <div>
+            <input formControlName ='pincode' 
+            class="form-control form-control-sm" type="text" required>
+            <div *ngIf="f.pincode.touched && f.pincode.invalid"
+            class="alert alert-danger">
+            <div *ngIf="f.pincode.errors">pincode is required.</div>
+            </div>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid" >{{buttonText}}</button>
+    
+    <!-- <button class="btn btn-primary btn-lg">Cancel</button> -->
+</form>
